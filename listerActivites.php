@@ -8,6 +8,7 @@
     //http://localhost/Webservice_PHP_3DSoft/listerActivites.php
 
     $tab = array();
+
     foreach ($lesResultats as $unResultat) {
         $ligne['id_activite'] = $unResultat['id_activite'];
         $ligne['nom'] = $unResultat['nom'];
@@ -15,9 +16,9 @@
         $ligne['image_url'] = $unResultat['image_url'];
         $ligne['lien'] = $unResultat['lien'];
         $ligne['budget'] = $unResultat['budget'];
-        // la ligne description casse le programme TODO
-        /*$ligne['description'] = $unResultat['description'];*/
-        $ligne['description'] = "fix description TODO";
+        // la ligne description doit être convertie en utf8 sinon elle casse le programme:
+        //https://www.php.net/manual/en/function.utf8-encode.php
+        $ligne['description'] = utf8_encode($unResultat['description']);
         $ligne['date_debut'] = $unResultat['date_debut'];
         $ligne['date_fin'] = $unResultat['date_fin'];
         $ligne['prix'] = $unResultat['prix'];
