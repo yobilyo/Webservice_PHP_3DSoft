@@ -45,7 +45,8 @@
 
         $tab[] = $ligne;
 
-        print(json_encode($tab));
+        //https://developer.mozilla.org/fr/docs/Web/CSS/overflow-wrap
+        echo "<div style='overflow-wrap:anywhere;'>".json_encode($tab)."</div>";
     } else {
         print("[]");
     }

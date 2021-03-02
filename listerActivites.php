@@ -17,7 +17,7 @@
         $ligne['budget'] = $unResultat['budget'];
         // la ligne description casse le programme TODO
         /*$ligne['description'] = $unResultat['description'];*/
-        $ligne['description'] = "TODO fix description TODO";
+        $ligne['description'] = "fix description TODO";
         $ligne['date_debut'] = $unResultat['date_debut'];
         $ligne['date_fin'] = $unResultat['date_fin'];
         $ligne['prix'] = $unResultat['prix'];
@@ -25,10 +25,8 @@
         $ligne['id_tresorerie'] = $unResultat['id_tresorerie'];
 
         $tab[] = $ligne;
-        //print(json_encode($ligne));
-        print(json_encode($tab));
+
+        echo "<div style='overflow-wrap:anywhere;'>".json_encode($tab)."</div>";
     }
-
-
 
 ?>

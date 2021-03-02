@@ -37,6 +37,6 @@
             $tab[] = $ligne;
         }
 
-        print(json_encode($tab));
+        echo "<div style='overflow-wrap:anywhere;'>".json_encode($tab)."</div>";
     }
 ?>
