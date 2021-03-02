@@ -24,15 +24,12 @@
             $ligne['lieu'] = $unResultat['lieu'];
             $ligne['image_url'] = $unResultat['image_url'];
             $ligne['lien'] = $unResultat['lien'];
-            // la ligne description casse le programme TODO
-            /*$ligne['description'] = $unResultat['description'];*/
-            //non nécessaire
+            $ligne['description'] = utf8_encode($unResultat['description']);
             /*$ligne['date_debut'] = $unResultat['date_debut'];
             $ligne['date_fin'] = $unResultat['date_fin'];
             $ligne['prix'] = $unResultat['prix'];
             $ligne['nb_personnes'] = $unResultat['nb_personnes'];
-            $ligne['id_tresorerie'] = $unResultat['id_tresorerie'];
-            */
+            $ligne['id_tresorerie'] = $unResultat['id_tresorerie'];*/
 
             $tab[] = $ligne;
         }
