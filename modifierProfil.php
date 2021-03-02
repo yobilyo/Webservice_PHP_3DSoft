@@ -7,7 +7,7 @@
         if ($_REQUEST['droits'] == "admin" || $_REQUEST['droits'] == "salarie") {
             //utilisateurSalarie
 
-            //http://localhost/Webservice_PHP_3DSoft/ModifierProfil.php?idutilisateur=1&username=melania007&password=&abcd&email=melanie@cfa-insta.fr&droits=admin&nom=testnom&prenom=testprenom&tel=testtel&adresse=testadresse&quotient_fam=1&service=developpeur&sexe=femme
+            //http://localhost/Webservice_PHP_3DSoft/ModifierProfil.php?idutilisateur=1&username=melania00001&password=&abcd&email=melanie@cfa-insta.fr&droits=admin&nom=testnom&prenom=testprenom&tel=testtel&adresse=testadresse&quotient_fam=1&service=developpeur&sexe=femme
 
             if (isset($_REQUEST['idutilisateur']) && isset($_REQUEST['username']) && isset($_REQUEST['password']) && isset($_REQUEST['email']) && isset($_REQUEST['droits']) && isset($_REQUEST['nom']) && isset($_REQUEST['prenom']) && isset($_REQUEST['tel']) && isset($_REQUEST['adresse']) && isset($_REQUEST['quotient_fam']) && isset($_REQUEST['service']) && isset($_REQUEST['sexe'])) {
 
