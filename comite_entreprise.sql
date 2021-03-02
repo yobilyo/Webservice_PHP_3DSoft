@@ -264,8 +264,10 @@ create view utilisateur_sponsor_don as (
 		s.budget, 
 		s.tel,
 		s.lien,
+		d.datedon,
         d.montant,
-        d.appreciation
+        d.appreciation,
+		d.id_tresorerie
 
     from utilisateur u, sponsor s, don d
     where u.idutilisateur = s.idutilisateur 
@@ -469,27 +471,27 @@ insert into activite values (1, "Parc Asterix", "Plailly", "lib/images/activites
 	(3, "Voyage a NYC", "Etats Unis", "lib/images/activites/voyage-new-york.jpg","https://www.leclercvoyages.com/product/?pid=253098&c.desti=US.EST#rubric=search&dispo=25-03-2021-5-3-PAR&dpci=&p=m_c.desti%3DUS.NYC", 7000, "Detendez vous en optant pour un voyage exceptionnel", "2020-12-08", "2021-03-14", 950, 0, 1),
 	(4, "Soins massages", "Paris", "lib/images/activites/massage.jpg","https://www.massage-concept.fr/", 900, "Prenez soin de vous avec ce massage tout compris", "2020-12-14", "2021-05-10", 32, 0, 1);
 
-insert into utilisateur values (1, "Melanie", "45D4E", "melanie@cfa-insta.fr", "salarie"), 
-	(2, "Julien", "885DE", "julien@cfa-insta.fr", "salarie"), 
-	(3, "Gerard", "8555ed", "Gerard@cfa-insta.fr", "admin"),
-	(4, "Franck", "445d4d", "Franck@cfa-insta.fr", "admin"),
-	(5, "Damiens", "23daeez", "damiens@cfa-insta.fr", "salarie"),
-	(6, "Cedric", "c85d4ee", "cedric@airfrance.fr", "sponsor"),
-	(7, "Jessica", "jess744", "jessica@lysdor.com", "sponsor"),
-	(8, "Michele", "m847cihe", "michele@ticketmaster.fr", "sponsor"),
-	(9, "Jeremie", "j885ee", "jeremie@voyage-prive.com", "sponsor"),
-	(10, "sponsor", "", "sp@gmail.com", "sponsor"),
-	(11, "admin", "", "a@gmail.com", "admin"),
-	(12, "salarie", "", "sa@gmail.com", "salarie");
-	#(13, "sponsor", "", "sp@gmail.com", "sponsor");
+insert into utilisateur values (1, "melcfaduv", "45D4E", "melanie@cfa-insta.fr", "salarie"), 
+	(2, "julcfabarr", "885DE", "julien@cfa-insta.fr", "salarie"), 
+	(3, "gercfadepa", "8555ed", "gerard@cfa-insta.fr", "admin"),
+	(4, "fracfahami", "445d4d", "franck@cfa-insta.fr", "admin"),
+	(5, "damcfadeni", "23daeez", "damiens@cfa-insta.fr", "salarie"),
+	(6, "cedrairfra", "c85d4ee", "cedric@airfrance.fr", "sponsor"),
+	(7, "jesslysdor", "jess744", "jessica@lysdor.com", "sponsor"),
+	(8, "michticmas", "m847cihe", "michele@ticketmaster.fr", "sponsor"),
+	(9, "jerevoypri", "j885ee", "jeremie@voyage-prive.com", "sponsor"),
+	(10, "sponsortest", "", "sp@gmail.com", "sponsor"),
+	(11, "admintest", "", "a@gmail.com", "admin"),
+	(12, "salarietest", "", "sa@gmail.com", "salarie");
+	#(13, "sponsortest2", "", "sp@gmail.com", "sponsor");
 
-insert into salarie values (1, "Melanie", "DUVIL", "0633928562", "paris", 2, "developpeur", "femme"), 
-							(2, "Julien", "BARRETO", "0645749655", "toulouse", 1, "commercial", "homme"),
-							(3, "Gerard", "DEPARD", "0658856244", "bordeaux", 4, "comptabilite", "homme"),
-							(4, "Franck", "HAMIAUX", "0755896254", "caen", 3, "ressources_humaines", "homme"),
-							(5, "Damiens", "DENIS", "0646220322", "boissy-saint-leger", 1, "commercial", "homme"),
-							(11, "Franck", "HAMIAUX", "0755896254", "caen", 3, "ressources_humaines", "homme"),
-							(12, "Franck", "HAMIAUX", "0755896254", "caen", 3, "ressources_humaines", "homme");
+insert into salarie values (1, "DUVIL", "Melanie", "0633928562", "paris", 2, "developpeur", "femme"), 
+							(2, "BARRETO", "Julien", "0645749655", "toulouse", 1, "commercial", "homme"),
+							(3, "DEPARD", "Gerard", "0658856244", "bordeaux", 4, "comptabilite", "homme"),
+							(4, "HAMIAUX", "Franck", "0755896254", "caen", 3, "ressources_humaines", "homme"),
+							(5, "DENIS", "Damiens", "0646220322", "boissy-saint-leger", 1, "commercial", "homme"),
+							(11, "TESTNOMADMIN", "Testprenomadmin", "0755896254", "caen", 3, "ressources_humaines", "homme"),
+							(12, "TESTNOMSALARIE", "Testprenomsalarie", "0755896254", "caen", 3, "ressources_humaines", "homme");
 
 insert into participer values (1, 1, "2020-10-05"),
 								(2, 2, "2020-08-20"),
