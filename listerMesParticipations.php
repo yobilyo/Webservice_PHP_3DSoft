@@ -6,7 +6,7 @@
         $lesResultats = $unModele->listerMesParticipations($_REQUEST['email']);
         $tab = array();
 
-        //http://localhost/Webservice_PHP_3DSoft/listerMesParticipations?email=melanie@cfa-insta.fr&password=45D4E
+        //http://localhost/Webservice_PHP_3DSoft/listerMesParticipations.php?email=melanie@cfa-insta.fr&password=45D4E
 
         foreach ($lesResultats as $unResultat) {
             //utilisateur
